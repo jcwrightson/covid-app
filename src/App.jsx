@@ -1,7 +1,7 @@
-import "./App.css";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom"
+import "./App.css"
 
-import CovidStatus from "./CovidStatus";
+import CovidStatus from "./CovidStatus"
 
 const Routes = () => (
   <Switch>
@@ -12,7 +12,7 @@ const Routes = () => (
       <CovidStatus defaultSelected="united-kingdom" />
     </Route>
   </Switch>
-);
+)
 
 const App = () => {
   return (
@@ -21,7 +21,7 @@ const App = () => {
         <Routes />
       </BrowserRouter>
     </div>
-  );
-};
+  )
+}
 
-export default App;
+export default App
