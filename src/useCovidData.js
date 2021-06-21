@@ -1,10 +1,15 @@
 import { useEffect, useState } from "react"
+import { useHistory, useParams } from "react-router-dom"
 import { fetchCountries, fetchCases } from "./api"
 
 const useCovidData = (defaultSelected, defaultStatusType) => {
   const [countries, setCountries] = useState([])
   const [selected, setSelected] = useState(defaultSelected)
   const [cases, setCases] = useState(0)
+
+  const { slug } = useParams()
+
+  const history = useHistory()
 
   useEffect(() => {
     fetchCountries().then(setCountries)
@@ -14,8 +19,14 @@ const useCovidData = (defaultSelected, defaultStatusType) => {
     fetchCases(selected, defaultStatusType).then(setCases)
   }, [selected, defaultStatusType])
 
+  useEffect(() => {
+    if (slug) {
+      setSelected(slug)
+    }
+  }, [slug])
+
   const handleSelect = (e) => {
-    setSelected(e.target.value)
+    history.push(`/${e.target.value}`)
   }
 
   return {

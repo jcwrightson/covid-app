@@ -1,5 +1,5 @@
-const Result = ({ cases }) => {
-  return <p className="result">{cases}</p>
+const Result = ({ cases, status }) => {
+  return <p className="result">{status.toUpperCase()} {cases}</p>
 }
 
 export default Result
