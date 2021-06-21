@@ -4,12 +4,12 @@ export const fetchCountries = async () => {
   return data.map((country) => country.Slug).sort()
 }
 
-export const fetchCases = async (country) => {
+export const fetchCases = async (country, type = "confirmed") => {
   if (!country) {
     return -1
   }
   const res = await fetch(
-    `https://api.covid19api.com/total/country/${country}/status/confirmed`
+    `https://api.covid19api.com/total/country/${country}/status/${type}`
   )
   const data = await res.json()
 

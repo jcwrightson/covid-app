@@ -1,15 +1,16 @@
 import { BrowserRouter, Route, Switch } from "react-router-dom"
 import "./App.css"
-
-import CovidStatus from "./CovidStatus"
+import SelectCountry from "./SelectCountry"
 
 const Routes = () => (
   <Switch>
-    <Route path="/:slug">
-      <CovidStatus />
-    </Route>
+    {/* <Route path="/:slug">
+      <Covid />
+    </Route> */}
     <Route path="/">
-      <CovidStatus defaultSelected="united-kingdom" />
+      <SelectCountry defaultStatusType={"confirmed"}/>
+      <SelectCountry defaultStatusType={"recovered"}/>
+      <SelectCountry defaultStatusType={"deaths"}/>
     </Route>
   </Switch>
 )
