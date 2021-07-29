@@ -1,7 +1,8 @@
 import { BrowserRouter, Route, Switch } from "react-router-dom"
 import "./App.css"
-import Select from "./Select"
-import withCovidData from "./withCovidData"
+
+import Select from "./components/Select"
+import withCovidData from "./hocs/withCovidData"
 
 // Use HOC to map state to props
 const SelectCountry = withCovidData(Select)
@@ -15,10 +16,6 @@ const Routes = () => (
     <Route path="/">
       <SelectCountry />
     </Route>
-
-    {/* <Route path="/">
-      <SelectCountry defaultSelected={"sweden"} defaultStatusType={"recovered"} />
-    </Route> */}
   </Switch>
 )
 

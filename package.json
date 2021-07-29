@@ -36,7 +36,10 @@
       "last 1 safari version"
     ]
   },
-  "prettier":{
+  "prettier": {
     "semi": false
+  },
+  "devDependencies": {
+    "@testing-library/react-hooks": "^7.0.1"
   }
 }

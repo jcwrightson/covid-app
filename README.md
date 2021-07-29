@@ -1,4 +1,16 @@
-# Getting Started with Create React App
+# Covid React App
+
+This is for instructional purposes to demonstrate:
+
+- How to create and structure components
+- Where to put state
+- Speparating logic from components
+- How to use a custom hook
+- How to use a higher-order-component to map state to props
+- How to write some unit-tests (components)
+- How to write some unit-tests (custom hook)
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
